@@ -1,0 +1,29 @@
+header {
+    background-color: var(--card-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--medium) var(--x-large);
+}
+header > div {
+    display: flex;
+    align-items: center;
+}
+header > div p {
+    font-size: var(--large);
+}
+header > div img {
+    height: var(--large);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--medium);
+}
+nav ul li {
+    position: relative;
+    width: min-content;
+}
+nav ul a {
+    text-decoration: none;
+}

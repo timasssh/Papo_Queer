@@ -1,0 +1,22 @@
+/* global */
+@import url("./normalize.css");
+@import url("./variables.css");
+
+.rainbow-hover::after{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+
+    width: 100%;
+    height: var(--smaller);
+
+    border-radius: 2px;
+    background: var(--gradient-color);
+
+    transform: scaleY(0);
+    transition: 0.2s ease-in;
+}
+.rainbow-hover:hover::after {
+    transform: scaleY(1);
+}

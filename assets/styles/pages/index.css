@@ -1,0 +1,6 @@
+/* global */
+@import url("../globals/global.css");
+
+/* partials */
+@import url("./partials/testColor.css");
+@import url("./partials/header.css");

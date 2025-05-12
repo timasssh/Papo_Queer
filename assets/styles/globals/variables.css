@@ -1,0 +1,22 @@
+:root {
+    /* colors */
+    --text-color: #010101;
+    --card-color: #D9D9D9;
+    --emphasis-color: #E9E9E9;
+    --rainbow-color: -webkit-linear-gradient(#F71E24 20%, #FB6C2C 20%,#FB6C2C 40%, #FDFC42 40%, #FDFC42 60%, #238F35 60%, #238F35 80%, #0F62FA 80%);
+    --asexual-color: -webkit-linear-gradient(#000000 25%, #A4A4A4 25%,#A4A4A4 50%, #FFFFFF 50%, #FFFFFF 75%, #810081 75%);
+    --non_binary-color: -webkit-linear-gradient(#FCF434 25%, #FFFFFF 25%,#FFFFFF 50%, #9C59D1 50%, #9C59D1 75%, #2C2C2C 75%);
+    --pansexual-color: -webkit-linear-gradient(#FF1C8D 33%, #FFD700 33%,#FFD700 66%, #1AB2FF 66%);
+    --aromantic-color: -webkit-linear-gradient(#3DA542 20%, #A7D379 20%,#A7D379 40%, #FFFFFF 40%, #FFFFFF 60%, #A9A9A9 60%, #A9A9A9 80%, #000000 80%);
+    --lesbian-color: -webkit-linear-gradient(#D62800 20%, #FF9B56 20%,#FF9B56 40%, #FFFFFF 40%, #FFFFFF 60%, #D462A6 60%, #D462A6 80%, #A40062 80%);
+    --bisexual-color: -webkit-linear-gradient(#D60270 40%, #9B4F96 40%, #9B4F96 60%, #0038A8 60%);
+    --gradient-color: linear-gradient(90deg, #F71E24, #FB6C2C, #FDFC42, #238F35, #0F62FA);
+
+    /* measures */
+    --smaller: 3px;
+    --small: 8px;
+    --medium: 16px;
+    --large: 24px;
+    --larger: 32px;
+    --x-large: 64px;
+}
