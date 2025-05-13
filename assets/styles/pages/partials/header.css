@@ -3,11 +3,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--medium) var(--x-large);
 }
 header > div {
     display: flex;
     align-items: center;
+}
+header > div a {
+    text-decoration: none;
 }
 header > div p {
     font-size: var(--large);
@@ -26,4 +28,21 @@ nav ul li {
 }
 nav ul a {
     text-decoration: none;
+}
+li:has(img.icon) {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        /* padding: var(--medium) var(--large); */
+    }
+}
+@media screen and (max-width: 480px) {
+    nav ul li {
+        display: none;
+    }
+    nav ul li:has(img.icon) {
+        display: inline;
+    }
 }

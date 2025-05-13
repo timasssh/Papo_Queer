@@ -20,3 +20,18 @@
 .rainbow-hover:hover::after {
     transform: scaleY(1);
 }
+
+.icon {
+    height: 24px;
+    width: 24px;
+}
+
+.margin {
+    padding: var(--medium) var(--x-large);
+
+}
+@media screen and (max-width: 768px) {
+    .margin {
+        padding: var(--medium) var(--large);
+    }
+}
