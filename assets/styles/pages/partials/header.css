@@ -1,48 +1,45 @@
-header {
+body > header {
     background-color: var(--card-color);
+    padding-top: var(--medium);
+    padding-bottom: var(--medium);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-header > div {
+body > header > div {
     display: flex;
     align-items: center;
 }
-header > div a {
+body > header > div a {
     text-decoration: none;
 }
-header > div p {
+body > header > div p {
     font-size: var(--large);
 }
-header > div img {
+body > header > div img {
     height: var(--large);
 }
-nav ul {
+header nav ul {
     list-style: none;
     display: flex;
     gap: var(--medium);
 }
-nav ul li {
+header nav ul li {
     position: relative;
     width: min-content;
 }
-nav ul a {
+header nav ul a {
     text-decoration: none;
 }
-li:has(img.icon) {
+nav li:has(img.icon) {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
-    header {
-        /* padding: var(--medium) var(--large); */
-    }
-}
 @media screen and (max-width: 480px) {
-    nav ul li {
+    header nav ul li {
         display: none;
     }
-    nav ul li:has(img.icon) {
+    header nav ul li:has(img.icon) {
         display: inline;
     }
 }

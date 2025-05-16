@@ -4,3 +4,52 @@
 /* partials */
 @import url("./partials/testColor.css");
 @import url("./partials/header.css");
+
+main {
+    margin: var(--large) var(--xx-large);
+    padding-top: var(--x-large);
+    padding-bottom: var(--x-large);
+    display: grid;
+    gap: var(--medium);
+    grid-template-columns: auto auto;
+}
+.card {
+    background-color: var(--card-color);
+    height: var(--xxx-large);
+    padding: var(--large); 
+}
+#discover-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-column: 1 / span 1;
+}
+#carrousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--medium);
+}
+#carrousel > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--small);
+}
+#carrousel > div .icon:first-child {
+    transform: rotateY(180deg);
+}
+#flag {
+    height: var(--xx-large);
+    width: calc(2 * var(--xx-large));
+    background: var(--bisexual-color);
+}
+
+#understand-card {
+    grid-column: 1 / span 1;
+}
+#explore-card {
+    grid-column: 1 / span 2;
+}

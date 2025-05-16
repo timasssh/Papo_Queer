@@ -6,3 +6,7 @@
    font-family: Roboto, sans-serif;
    color: var(--text-color);
 }
+
+body {
+   background-color: #fefefe;
+}
