@@ -2,8 +2,8 @@
 @import url("../globals/global.css");
 
 /* partials */
-@import url("./partials/testColor.css");
 @import url("./partials/header.css");
+@import url("./partials/footer.css");
 
 main {
     margin: var(--large) var(--xx-large);
