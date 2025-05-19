@@ -29,6 +29,11 @@ li.rainbow-hover, .rainbow-hover li {
     width: var(--large);
 }
 
+.see-more {
+    font-size: var(--medium);
+    color: #01010180;
+}
+
 .lateral-padding {
     padding-left: var(--x-large);
     padding-right: var(--x-large);

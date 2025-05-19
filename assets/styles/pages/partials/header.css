@@ -1,4 +1,8 @@
 body > header {
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    
     background-color: var(--card-color);
     padding-top: var(--medium);
     padding-bottom: var(--medium);
