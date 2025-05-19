@@ -29,13 +29,12 @@
 .lateral-padding {
     padding-left: var(--x-large);
     padding-right: var(--x-large);
-
 }
 .drop-shadow {
     box-shadow: 1px 8px 8px #00000044;
 }
 @media screen and (max-width: 768px) {
-    .margin {
+    .lateral-padding {
         padding: var(--medium) var(--large);
     }
 }
