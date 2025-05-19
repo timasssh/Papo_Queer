@@ -13,11 +13,8 @@ main {
     gap: var(--medium);
     grid-template-columns: 1fr 1fr;
 }
-.card {
-    background-color: var(--card-color);
-    height: var(--xxx-large);
-    padding: var(--large); 
-}
+
+/* first card */
 #discover-card {
     display: flex;
     flex-direction: column;
@@ -46,6 +43,7 @@ main {
     background: var(--bisexual-color);
 }
 
+/* second card */
 #understand-card{
     display: flex;
     flex-direction: column;
@@ -62,7 +60,7 @@ main {
     justify-content: space-evenly;
 }
 #understand-card > section > a {
-    height: calc(1.5 * var(--x-large));
+    min-height: calc(1.5 * var(--x-large));
     width: 100%;
     text-decoration: none;
     position: relative;
@@ -80,13 +78,6 @@ main {
 #understand-card ul li {
     width: fit-content;
 }
-.emphasis-card {
-    background-color: var(--emphasis-color);
-    padding: var(--medium);
-    padding-left: var(--large);
-    padding-right: var(--large);
-    border-radius: var(--small);
-}
 .understand-card-icon {
     height: var(--larger);
 }
@@ -94,6 +85,7 @@ main {
     height: calc(1.4 * var(--larger));
 }
 
+/* third card */
 #explore-card {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -149,14 +141,27 @@ main {
     right: calc(-1.5 * var(--x-large));
 }
 
+/* responsive design */
 @media screen and (max-width: 1140px) {
     main {
         margin: var(--large) var(--large);
     }
 }
+@media screen and (max-width: 960px) {
+    #understand-card > section > a {
+        gap: var(--large);
+    }
+    #understand-card > section > a p{
+        font-size: 80%;
+    }
+}
 @media screen and (max-width: 860px) {
     main {
         margin: var(--small);
+    }
+
+    #understand-card > section > a {
+        font-size: 80%;
     }
 
     #explore-card > section > a {
@@ -182,6 +187,13 @@ main {
     }
     #flag {
         max-width: calc(2 * var(--xx-large));
+    }
+
+    #understand-card > section > a {
+        font-size: 100%;
+    }
+    #understand-card > section > a {
+        gap: var(--larger);
     }
 
     #explore-card {
