@@ -61,24 +61,56 @@ main {
     align-items: center;
     justify-content: space-evenly;
 }
+#understand-card > section > a {
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--larger);
+}
+#understand-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--medium);
+}
+#understand-card ul li {
+    width: fit-content;
+}
 .emphasis-card {
     background-color: var(--emphasis-color);
     height: calc(1.5 * var(--x-large));
     width: 100%;
     padding: var(--medium);
-    padding-left: var(--xx-large);
-    padding-right: var(--xx-large);
+    padding-left: var(--large);
+    padding-right: var(--large);
     border-radius: var(--small);
+}
+.card-icon {
+    height: var(--larger);
+}
+.card-icon:first-child {
+    height: calc(1.4 * var(--larger));
 }
 
 #explore-card {
-  grid-column-start: 1;
-  grid-column-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
+@media screen and (max-width: 1140px) {
+    main {
+        margin: var(--large) var(--large);
+    }
+}
+@media screen and (max-width: 860px) {
+    main {
+        margin: var(--small);
+    }
+}
 @media screen and (max-width: 768px) {
     main {
-        margin: var(--medium) var(--medium);
         grid-template-columns: 1fr;
     }
 
@@ -102,5 +134,13 @@ main {
     .emphasis-card {
         padding-left: var(--medium);
         padding-right: var(--medium);
+    }
+}
+@media screen and (max-width: 480px) {
+    .card-icon {
+        height: var(--large);
+    }
+    .card-icon:first-child {
+        height: calc(1.4 * var(--large));
     }
 }

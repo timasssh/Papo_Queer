@@ -2,7 +2,10 @@
 @import url("./normalize.css");
 @import url("./variables.css");
 
-.rainbow-hover::after{
+li.rainbow-hover, .rainbow-hover li {
+    position: relative;
+}
+.rainbow-hover a::after, .rainbow-hover p::after, .rainbow-hover h6::after, .rainbow-hover h5::after, .rainbow-hover h4::after, .rainbow-hover h3::after, .rainbow-hover h2::after, .rainbow-hover h1::after{
     content: "";
     position: absolute;
     bottom: -2px;
@@ -17,13 +20,13 @@
     transform: scaleY(0);
     transition: 0.2s ease-in;
 }
-.rainbow-hover:hover::after {
+.rainbow-hover:hover a::after, .rainbow-hover:hover p::after, .rainbow-hover:hover h6::after, .rainbow-hover:hover h5::after, .rainbow-hover:hover h4::after, .rainbow-hover:hover h3::after, .rainbow-hover:hover h2::after, .rainbow-hover:hover h1::after{
     transform: scaleY(1);
 }
 
 .icon {
-    height: 24px;
-    width: 24px;
+    height: var(--large);
+    width: var(--large);
 }
 
 .lateral-padding {
@@ -32,6 +35,12 @@
 }
 .drop-shadow {
     box-shadow: 1px 8px 8px #00000044;
+}
+
+@media screen and (max-width: 960px) {
+    .lateral-padding {
+        padding: var(--large) var(--larger);
+    }
 }
 @media screen and (max-width: 768px) {
     .lateral-padding {

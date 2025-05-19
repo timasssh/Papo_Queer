@@ -25,7 +25,6 @@ header nav ul {
     gap: var(--medium);
 }
 header nav ul li {
-    position: relative;
     width: min-content;
 }
 header nav ul a {
