@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papo Queer</title>
+    <link rel="stylesheet" href="../styles/pages/contact.css">
+    <link rel="shortcut icon" href="../img/pride-flag.png" type="image/x-icon">
+</head>
+<body>
+    <header class="lateral-padding drop-shadow">
+        <div>
+            <img src="../img/pride-flag.png" alt="bandeira do orgulho, logo da página" id="logo">
+            <a href="../../index.html"><p>Papo_queer</p></a>
+        </div>
+        <nav>
+            <ul>
+                <li class="rainbow-hover">
+                    <a  href="../../index.html">início</a>
+                </li>
+                <li class="rainbow-hover">
+                    <a  href="#">contato</a>
+                </li>
+                <li class="rainbow-hover">
+                    <a  href="#">conteúdo</a>
+                </li>
+                <li>
+                    <img class="icon" src="./assets/img/icon-hamburguer.svg" alt="icone menu hamburguer">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="lateral-padding">
+        <article class="card drop-shadow" id="about-card">
+            <section>
+                <h2>Sobre o desenvolvedor</h2>
+                <p>Esta página é um espaço para você saber quem desenvolveu este projeto e, se quiser, enviar uma mensagem.</p>
+            </section>
+            <section>
+                <img src="../img/image_user.png" alt="imagem de usuário padrão do github">
+                <h3>Timas</h3>
+                <small>qualquer pronome</small>
+                <p>Olá, me chamo Timas. Sou faço parte da comunidade LGBTQIAPN+ e sou estudante de programação, por isso, decidi criar este projeto, falando sobre temas relevantes à comunidade e, simultaneamente, expandindo meus conhecimentos nas áreas de design e programação.</p>
+            </section>
+            <section>
+                <h3>Redes sociais:</h3>
+                <a href="https://github.com/timasssh/"><img src="../img/github_icon.svg" alt="ícone github">timasssh</a>
+                <a href="#"><img src="../img/linkedin_icon.svg" alt="ícone linkedin">timasssh</a>
+            </section>
+        </article>
+        <article class="card drop-shadow" id="contact-card">
+            <h2 id="contact-form-title">Ente em contato</h2>
+            <section>
+                <form>
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required>
+                    <label for="message">Mensagem</label>
+                    <textarea name="message" required></textarea>
+                    <label for="subject">Categoria da mensagem</label>
+                    <select name="subject">
+                        <option value="project">Sobre o projeto</option>
+                        <option value="developer">Sobre o desenvolvedor</option>
+                        <option value="content">Sobre o conteúdo</option>
+                    </select>
+                    <input type="submit" value="Enviar">
+                </form>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <div>
+            <h3>© 2025 Projeto Educacional LGBTQIAPN+ — Todos os direitos reservados.</h3>
+            <small>Este site é um protótipo sem fins lucrativos, criado com propósito educativo e informativo.</small>
+        </div>
+        <nav>
+            <div>
+                <ul>
+                    <li class="rainbow-hover"><a href="#">Sobre o projeto</a></li>
+                    <li class="rainbow-hover"><a href="./contact.html">Contato</a></li>
+                    <li class="rainbow-hover"><a href="#">Política de privacidade</a></li>
+                    <li class="rainbow-hover"><a href="#">Referências</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li class="rainbow-hover"><a href="#">Instagram</a></li>
+                    <li class="rainbow-hover"><a href="https://github.com/timasssh/Papo_Queer">Github</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div>
+            <p>As informações aqui apresentadas têm caráter educativo e não substituem apoio jurídico, psicológico ou médico.</p>
+            <p>Consulte profissionais quando necessário.</p>
+        </div>
+    </footer>
+
+    <!-- script to interrupt the form submit -->
+    <script>
+        document.querySelector("main form").addEventListener("click", (event) => {event.preventDefault()});
+    </script>
+</body>
+</html>

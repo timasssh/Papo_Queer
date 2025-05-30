@@ -26,7 +26,6 @@ li.rainbow-hover, .rainbow-hover li {
 
 .card {
     background-color: var(--card-color);
-    height: var(--xxx-large);
     padding: var(--large); 
 }
 .emphasis-card {

@@ -13,6 +13,9 @@ main {
     gap: var(--medium);
     grid-template-columns: 1fr 1fr;
 }
+main article {
+    height: var(--xxx-large);
+}
 
 /* first card */
 #discover-card {

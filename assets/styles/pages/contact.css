@@ -1,0 +1,55 @@
+/* global */
+@import url("../globals/global.css");
+
+/* partials */
+@import url("./partials/header.css");
+@import url("./partials/footer.css");
+
+main {
+    margin: var(--large) var(--xx-large);
+    padding-top: var(--x-large);
+    padding-bottom: var(--x-large);
+    display: grid;
+    gap: var(--medium);
+    grid-template-columns: 1fr 1fr;
+}
+main article {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* first card (about) */
+#about-card {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+/* second card (contact form) */
+#contact-card {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+#contact-card section {
+    width: 100%;
+}
+#contact-card form {
+    width: 80%;
+    margin: auto;
+    
+    display: flex;
+    flex-direction: column;
+}
+#contact-card form > *:focus {
+    outline: none;
+}
+#contact-card form input, #contact-card form textarea, #contact-card form select {
+    min-height: var(--larger);
+    border: none;
+    border-radius: var(--small);
+    padding: 0px var(--small);
+    margin-bottom: var(--medium);
+}
