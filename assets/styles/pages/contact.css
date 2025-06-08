@@ -26,7 +26,34 @@ main article {
 #about-card {
     grid-column-start: 1;
     grid-column-end: 2;
+    gap: var(--medium);
+
+    text-align: center;
 }
+#about-card section:not(:nth-child(1)) {
+    max-width: 80%;
+    
+    display: flex;
+    flex-direction: column;
+}
+#about-card section:nth-child(2) {
+    gap: var(--medium);
+}
+#about-card section:nth-child(2) div {
+    height:fit-content;
+}
+#about-card section:nth-child(3) {
+    gap: var(--small);
+}
+#about-card section:nth-child(3) ul {
+    list-style: none;
+}
+#about-card section:nth-child(3) ul li a {
+    display: flex;
+    justify-content: center;
+    gap: var(--small);
+}
+
 
 /* second card (contact form) */
 #contact-card {
