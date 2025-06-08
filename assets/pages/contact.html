@@ -52,18 +52,33 @@
             <h2 id="contact-form-title">Ente em contato</h2>
             <section>
                 <form>
-                    <label for="name">Nome</label>
-                    <input type="text" name="name" required>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" required>
-                    <label for="message">Mensagem</label>
-                    <textarea name="message" required></textarea>
-                    <label for="subject">Categoria da mensagem</label>
-                    <select name="subject">
-                        <option value="project">Sobre o projeto</option>
-                        <option value="developer">Sobre o desenvolvedor</option>
-                        <option value="content">Sobre o conteúdo</option>
-                    </select>
+                    <div>
+                        <label for="name">Nome</label>
+                        <input id="fds" class="input_form" type="text" name="name" required>
+                        <span class="error_message">Digite seu nome!</span>
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input class="input_form" type="email" name="email" required>
+                        <span class="error_message">Digite um email válido!</span>
+                    </div>
+                    
+                    <div>
+                        <label for="message">Mensagem</label>
+                        <textarea class="input_form" name="message" required></textarea>
+                        <span class="error_message">Digite sua mensagem!</span>
+                    </div>
+
+                    <div>
+                        <label for="subject">Categoria da mensagem</label>
+                        <select class="input_form" name="subject">
+                            <option value="none">Nenhuma</option>
+                            <option value="project">Sobre o projeto</option>
+                            <option value="developer">Sobre o desenvolvedor</option>
+                            <option value="content">Sobre o conteúdo</option>
+                        </select>
+                    </div>
                     <input type="submit" value="Enviar">
                 </form>
             </section>

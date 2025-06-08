@@ -43,13 +43,60 @@ main article {
     display: flex;
     flex-direction: column;
 }
-#contact-card form > *:focus {
+#contact-card form > div {
+    margin-bottom: var(--medium);
+
+    display: flex;
+    flex-direction: column;
+}
+.input_form:focus {
     outline: none;
 }
-#contact-card form input, #contact-card form textarea, #contact-card form select {
+.input_form {
+    background-color: #fff;
     min-height: var(--larger);
-    border: none;
+    border: 1px solid transparent;
     border-radius: var(--small);
     padding: 0px var(--small);
-    margin-bottom: var(--medium);
+}
+.input_form:user-invalid {
+    box-shadow: none;
+    border: 1px var(--error-color) solid;
+}
+.input_form:user-invalid + span {
+    visibility: initial;
+}
+.error_message {
+    visibility: hidden;
+    font-size: 10px;
+    color: var(--error-color);
+}
+.input_form:user-valid {
+    border: 1px solid transparent;
+    border-radius: var(--small);
+    background: 
+        linear-gradient(to right, #fff), 
+        var(--gradient-color); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
+.input_form:user-valid + span {
+    visibility: hidden;
+}
+form input[type="submit"] {
+    align-self: center;
+    border: 1px solid #fff;
+    border-radius: var(--small);
+    padding: var(--medium) var(--large);
+    width: 40%;
+    background-color: #fff;
+}
+form input[type="submit"]:hover {
+    border: 1px solid transparent;
+    border-radius: var(--small);
+    background: 
+        linear-gradient(to right, #fff), 
+        var(--gradient-color); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
 }
