@@ -1,0 +1,26 @@
+/* global */
+@import url("../globals/global.css");
+
+/* partials */
+@import url("./partials/header.css");
+@import url("./partials/footer.css");
+
+main {
+    margin: var(--large) var(--x-large);
+    padding-top: var(--x-large);
+    padding-bottom: var(--x-large);
+}
+main article{
+    display: flex;
+    flex-direction: column;
+    gap: var(--small);
+}
+main article p:not(:first-of-type){
+    margin: var(--small) 0 var(--small) 0;
+}
+dt {
+    margin-top: var(--medium);
+}
+dd {
+    margin-left: var(--large);
+}

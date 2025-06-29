@@ -55,6 +55,10 @@ li.rainbow-hover, .rainbow-hover li {
 .drop-shadow {
     box-shadow: 1px 8px 8px #00000044;
 }
+.anchor_link {
+    position: absolute;
+    margin-top: calc(-1.25*var(--x-large));
+}
 
 @media screen and (max-width: 960px) {
     .lateral-padding {
