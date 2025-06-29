@@ -9,18 +9,75 @@ main {
     margin: var(--large) var(--x-large);
     padding-top: var(--x-large);
     padding-bottom: var(--x-large);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--small);
 }
 main article{
     display: flex;
     flex-direction: column;
     gap: var(--small);
+
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 main article p:not(:first-of-type){
     margin: var(--small) 0 var(--small) 0;
 }
-dt {
+article dt {
     margin-top: var(--medium);
 }
-dd {
+article dd {
     margin-left: var(--large);
+}
+article section > div {
+    height: fit-content;
+    display: flex;
+    gap: var(--small);
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--small);
+}
+article section > div:nth-of-type(2) {
+    flex-direction: row-reverse;
+}
+article figure {
+    width: calc(2*var(--xx-large));
+    padding: var(--small);
+    border: 1px solid #000;
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+
+}
+article figure img {
+    max-height: calc(2*var(--xx-large));
+    max-width: calc(2*var(--xx-large));
+    background-color: var(--card-color);
+}
+article figure figcaption {
+    text-align: center;
+}
+main > aside {
+    background-color: var(--card-color);
+
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+main #anchor_top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: var(--small);
+    bottom: var(--medium);
+    background-color: var(--card-color);
+    height: calc(1.75*var(--large));
+    width: calc(1.75*var(--large));
+    border-radius: 50%;
+}
+main #anchor_top img{
+    transform: rotateZ(-90deg);
 }
