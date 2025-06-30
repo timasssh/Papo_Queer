@@ -14,6 +14,8 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
     gap: var(--small);
 }
+
+/* text */
 main > article{
     display: flex;
     flex-direction: column;
@@ -35,19 +37,27 @@ article dt {
 article dd {
     margin-left: var(--large);
 }
-article section > div {
+main > article section > div {
     height: fit-content;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     gap: var(--small);
-    align-items: center;
-    justify-content: center;
     margin-bottom: var(--small);
 }
-article section > div:nth-of-type(2) {
-    flex-direction: row-reverse;
+main > article section > div:first-of-type p{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+main > article section > div:first-of-type figure {
+    grid-area: 1 / 2 / span 2 / span 1;
+}
+main > article section > div:nth-of-type(2) figure {
+    grid-area: 1 / 1 / span 2 / span 1;
+      
 }
 article figure {
     width: calc(2*var(--xx-large));
+    height: fit-content;
     padding: var(--small);
     border: 1px solid #000;
     background-color: #fff;
@@ -64,6 +74,8 @@ article figure img {
 article figure figcaption {
     text-align: center;
 }
+
+/* aside */
 main > aside {
     padding: var(--large) var(--medium);
     background-color: var(--card-color);
@@ -84,7 +96,7 @@ main aside article {
     text-align: left;
     font-size: calc(1em*0.8);
 }
-main aside > section:first-of-type * {
+main aside > section:first-of-type article  *{
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 1;
@@ -129,6 +141,8 @@ main aside > section:nth-of-type(2) article section small {
     bottom: -2px;
     align-self: flex-end;
 }
+
+/* fixed utility tools */
 #util {
     position: fixed;
     right: var(--small);
@@ -155,4 +169,53 @@ main aside > section:nth-of-type(2) article section small {
     
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width: 1050px) {
+    main aside > section:first-of-type header {
+        font-size: 80%;
+    }
+}
+@media screen and (max-width: 990px) {
+    main > article section > div p:first-of-type {
+        grid-area: 1 / 1 / span 2 / span 2;
+    }
+    main > article section > div:first-of-type figure {
+        align-self: center;
+        grid-area: auto;
+    }
+    main > article section > div:nth-of-type(2) figure {
+        align-self: center;
+        grid-area: auto;
+        order: -1;
+    }
+}
+@media screen and (max-width: 900px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    main > aside {
+        max-height: calc(5*var(--xx-large));
+        overflow-y: scroll;
+    }
+    main > article section:nth-of-type(2) div{
+        display: flex;
+    }
+}
+@media screen and (max-width: 620px) {
+    main {
+        margin: var(--large);
+    }
+    article figure {
+        width: calc(1.4*var(--xx-large));
+    }
+    #reading_progress_info {
+        display: none;
+    }
+}
+@media screen and (max-width: 480px) {
+    article figure {
+        width: calc(1.2*var(--xx-large));
+    }
 }

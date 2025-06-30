@@ -40,7 +40,7 @@ main article {
     gap: var(--medium);
 }
 #about-card section:nth-child(2) div {
-    height:fit-content;
+    height: fit-content;
 }
 #about-card section:nth-child(3) {
     gap: var(--small);
@@ -126,4 +126,42 @@ form input[type="submit"]:hover {
         var(--gradient-color); 
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
+}
+
+@media screen and (max-width: 1040px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    #about-card section:nth-child(2) img {
+        max-width: var(--xx-large);
+        align-self: center;
+    }
+}
+@media screen and (max-width: 750px) {
+    main {
+        margin: var(--larger) var(--x-large);
+    }
+}
+@media screen and (max-width: 580px) {
+    main {
+        margin: var(--larger);
+    }
+    main > article > section p {
+        font-size: small;
+    }
+    form input[type="submit"] {
+        width: fit-content;
+    }
+}
+@media screen and (max-width: 430px) {
+    main > article > section *:not(p) {
+        font-size: 90%;
+    }
+    main > article > section p {
+        font-size: smaller;
+    }
+    form input[type="submit"] {
+        padding: var(--medium);
+    }
 }
