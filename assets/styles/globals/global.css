@@ -59,6 +59,40 @@ li.rainbow-hover, .rainbow-hover li {
     position: absolute;
     margin-top: calc(-1.25*var(--x-large));
 }
+.marked_text {
+    color: #fff;
+    background-image: linear-gradient(90deg, #000, #000, #000, #000, #000);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation-name: rainbow_blink;
+    animation-duration: 0.4s;
+    animation-delay: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rainbow_blink {
+    0% {
+        background-image: linear-gradient(90deg, #F71E24, #36180a, #000, #000, #000);
+    }
+    20% {
+        background-image: linear-gradient(90deg, #380709, #Fb6C2C, #414112, #000, #000);
+    }
+    40% {
+        background-image: linear-gradient(90deg, #000, #36180a, #FDFC42, #0d3614, #000);
+    }
+    60% {
+        background-image: linear-gradient(90deg, #000, #000, #000, #238F35, #041535);
+    }
+    80% {
+        background-image: linear-gradient(90deg, #000, #000, #000, #0d3614, #0F62FA);
+    }
+    100% {
+        background-image: linear-gradient(90deg, #000, #000, #000, #000, #000);
+    }
+}
 
 @media screen and (max-width: 960px) {
     .lateral-padding {
