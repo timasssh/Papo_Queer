@@ -14,7 +14,7 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
     gap: var(--small);
 }
-main article{
+main > article{
     display: flex;
     flex-direction: column;
     gap: var(--small);
@@ -22,7 +22,11 @@ main article{
     grid-column-start: 1;
     grid-column-end: 3;
 }
-main article p:not(:first-of-type){
+main article #post_info {
+    font-size: small;
+    margin-bottom: var(--small);
+}
+main > article p:not(:first-of-type){
     margin: var(--small) 0 var(--small) 0;
 }
 article dt {
@@ -61,23 +65,94 @@ article figure figcaption {
     text-align: center;
 }
 main > aside {
+    padding: var(--large) var(--medium);
     background-color: var(--card-color);
 
     grid-column-start: 3;
     grid-column-end: 4;
-}
-main #anchor_top {
+    text-align: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: var(--medium);
+}
+main > aside > section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--medium);
+}
+main aside article {
+    text-align: left;
+    font-size: calc(1em*0.8);
+}
+main aside > section:first-of-type * {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+main aside article ul {
+    list-style: none;
+}
+main aside > section:nth-of-type(2) article {
+    display: flex;
+    gap: var(--small);
+}
+main aside > section:nth-of-type(2) article img {
+    padding-top: 1em;
+    width: calc(1.25*var(--larger));
+    height: calc(1.25*var(--larger));
+    border-radius: 50%;
+}
+main aside > section:nth-of-type(2) article section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 var(--medium) var(--medium);
+}
+/* disable the hover efect of the 'emphasis-card' class */
+main aside > section:nth-of-type(2) article section:hover {
+    transform: none; 
+}
+main aside > section:nth-of-type(2) article section p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+main aside > section:nth-of-type(2) article section p:not(:first-of-type) {
+    display: none;
+}
+main aside > section:nth-of-type(2) article section small {
+    position: absolute;
+    bottom: -2px;
+    align-self: flex-end;
+}
+#util {
     position: fixed;
     right: var(--small);
     bottom: var(--medium);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#anchor_top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--card-color);
     height: calc(1.75*var(--large));
     width: calc(1.75*var(--large));
     border-radius: 50%;
 }
-main #anchor_top img{
+#anchor_top img{
     transform: rotateZ(-90deg);
+}
+#reading_progress_info {
+    font-size: small;
+    max-width: calc(1.5*var(--x-large));
+    
+    display: flex;
+    flex-direction: column;
 }
