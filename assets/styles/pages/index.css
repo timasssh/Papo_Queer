@@ -194,9 +194,10 @@ main article {
 
     #understand-card > section > a {
         font-size: 100%;
+        gap: var(--large);
     }
-    #understand-card > section > a {
-        gap: var(--larger);
+    .understand-card-icon:first-child {
+        height: calc(1.3 * var(--large));
     }
 
     #explore-card {

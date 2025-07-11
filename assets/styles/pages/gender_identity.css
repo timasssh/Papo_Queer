@@ -64,7 +64,7 @@ article figure {
 
     display: flex;
     flex-direction: column;
-
+    justify-self: flex-end;
 }
 article figure img {
     max-height: calc(2*var(--xx-large));
@@ -217,5 +217,11 @@ main aside > section:nth-of-type(2) article section small {
 @media screen and (max-width: 480px) {
     article figure {
         width: calc(1.2*var(--xx-large));
+    }
+}
+
+@media screen and (max-width: 440px) {
+    main {
+        margin: var(--medium);
     }
 }
