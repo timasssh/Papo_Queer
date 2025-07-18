@@ -43,8 +43,8 @@ A primeira versão do site (v1) será **estática** e organizada em páginas exp
 - [x] Definição de identidade do projeto
 - [x] Desenho da landing page no Figma
 - [x] Início da codificação em HTML/CSS
-- [ ] Finalização da home page
-- [ ] Criação das páginas temáticas e de conteúdo
+- [x] Finalização da home page
+- [x] Criação das páginas temáticas e de conteúdo
 
 ### Versão 2 (futuramente)
 - [ ] Avaliar viabilidade de adicionar sistema de comentários
