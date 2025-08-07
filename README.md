@@ -56,7 +56,7 @@ A primeira versão do site (v1) será **estática** e organizada em páginas exp
 
 ## 📝 Licença
 
-Este projeto ainda **não possui uma licença definida**. O uso e redistribuição de conteúdo estão restritos até que uma licença seja oficialmente estabelecida.
+Todos os direitos reservados. O uso e redistribuição de conteúdo restritos.
 
 ---
 
