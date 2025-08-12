@@ -127,6 +127,9 @@ form input[type="submit"]:hover {
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
 }
+form textarea {
+    resize: vertical;
+}
 
 @media screen and (max-width: 1040px) {
     main {
