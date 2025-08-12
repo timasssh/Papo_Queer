@@ -37,13 +37,16 @@ main article {
     justify-content: center;
     gap: var(--small);
 }
+#carousel > div .icon {
+    cursor: pointer;
+}
 #carousel > div .icon:first-child {
     transform: rotateY(180deg);
 }
 #flag {
     height: var(--xx-large);
     width: calc(2 * var(--xx-large));
-    background: var(--bisexual-color);
+    background: var(--rainbow-color);
 }
 
 /* second card */

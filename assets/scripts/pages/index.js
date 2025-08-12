@@ -2,18 +2,23 @@ import flagsInfo from "../globals/flagsInfo.js";
 
 const carousel = document.querySelector("#carousel");
 const carouselArrows = carousel.querySelectorAll(".icon")
-const flag = document.querySelector("#flag");
+const carouselFlag = document.querySelector("#flag");
 const flagName = carousel.querySelector("h3");
-let chosenFlag = 0;
+let IndexOfChosenFlag = Math.floor(Math.random() * flagsInfo.length);
 
+function setPrideFlagColor(chosedFlagIndex) {
+    carouselFlag.style.background = `var(${flagsInfo[chosedFlagIndex].color})`;
+    flagName.innerHTML = flagsInfo[chosedFlagIndex].name;
+}
+
+setPrideFlagColor(IndexOfChosenFlag);
 carouselArrows.forEach((arrow, index) => {
     arrow.addEventListener("click", () => {
         if (index === 1){
-            chosenFlag === (flagsInfo.length-1) ? chosenFlag = 0 : chosenFlag++;
+            IndexOfChosenFlag === (flagsInfo.length-1) ? IndexOfChosenFlag = 0 : IndexOfChosenFlag++;
         }else {
-            chosenFlag === 0 ? chosenFlag = flagsInfo.length-1 : chosenFlag--;
+            IndexOfChosenFlag === 0 ? IndexOfChosenFlag = flagsInfo.length-1 : IndexOfChosenFlag--;
         }
-        flag.style.background = `var(${flagsInfo[chosenFlag].color})`;
-        flagName.innerHTML = flagsInfo[chosenFlag].name;
+        setPrideFlagColor(IndexOfChosenFlag);
     });
 });
