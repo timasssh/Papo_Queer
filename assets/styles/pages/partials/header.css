@@ -23,26 +23,66 @@ body > header > div p {
 body > header > div img {
     height: var(--large);
 }
+header nav {
+    display: block;
+}
 header nav ul {
     list-style: none;
     display: flex;
     gap: var(--medium);
+    transition: 0.3ms;
 }
-header nav ul li {
-    width: min-content;
+
+
+#hamburger-menu {
+    min-height: 2ch;
+    min-width: 2ch;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+#hamburger-menu span {
+    min-height: 3px;
+    min-width: 20px;
+    background-color: var(--text-color);
+    border-radius: 3px;
+    transition: 0.3s;
 }
 header nav ul a {
     text-decoration: none;
 }
-nav li:has(img.icon) {
-    display: none;
+#hamburger-menu.active-menu {
+    align-items: center;
+    justify-content: center;
+}
+#hamburger-menu.active-menu span {
+    background-image: var(--gradient-color);
+}
+#hamburger-menu.active-menu span:first-child, #hamburger-menu.active-menu span:nth-child(2) {
+    transform: rotateZ(45deg);
+    position: absolute;
+}
+#hamburger-menu.active-menu span:nth-child(3) {
+    transform: rotateZ(-45deg);
+    position: absolute;
 }
 
 @media screen and (max-width: 480px) {
-    header nav ul li {
+    header nav ul {
         display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        right: 0;
+        top: 100%;
+        background-color: var(--emphasis-color);
+        width: 50vw;
+        height: 40vh;
     }
-    header nav ul li:has(img.icon) {
-        display: inline;
+    #hamburger-menu {
+        display: flex;
     }
 }
